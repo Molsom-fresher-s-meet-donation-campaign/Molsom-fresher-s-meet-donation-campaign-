@@ -1,4 +1,1 @@
-const words=["Hello","Thank You","Good Morning","Friend"];
-let i=0;
-function nextWord(){i=(i+1)%words.length;document.getElementById('word').innerText=words[i];}
-function checkAnswer(){document.getElementById('result').innerText='Great attempt!';}
+let dictionary={hello:"khur",friend:"nara",welcome:"molsom"};document.getElementById("fileInput").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=x=>{try{dictionary=JSON.parse(x.target.result);alert("Dictionary loaded");}catch(err){alert("Invalid JSON");}};r.readAsText(f);});function translateText(){const t=document.getElementById("englishText").value.toLowerCase().trim();document.getElementById("output").value=dictionary[t]||"Translation not found";}
