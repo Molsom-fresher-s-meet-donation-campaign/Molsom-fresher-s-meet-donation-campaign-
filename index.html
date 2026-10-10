@@ -1,98 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Molsom Freshers' Meet donation campaign information and pledge form." />
-  <title>Molsom Freshers' Meet — Donation Campaign</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molsom Language Learning</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand-mark" aria-hidden="true">MF</div>
-    <div>
-      <p class="eyebrow">Community • Welcome • Togetherness</p>
-      <h1>Molsom Freshers' Meet</h1>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Donation Campaign</p>
-        <h2>Help make the Freshers' Meet welcoming for everyone.</h2>
-        <p>Support the planning and activities of the Molsom Freshers' Meet. Every contribution is voluntary and appreciated.</p>
-        <a class="button" href="#donate">Make a pledge</a>
-      </div>
-      <div class="hero-card">
-        <span class="sparkle" aria-hidden="true">✦</span>
-        <p class="hero-card-label">Our shared goal</p>
-        <h3>Bring people together</h3>
-        <p>Celebrate new beginnings, friendship, and community spirit.</p>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <p class="eyebrow">About the campaign</p>
-      <h2>A little support goes a long way.</h2>
-      <p class="section-intro">Donations may help cover approved event costs such as venue arrangements, materials, refreshments, and programme activities. Please confirm the final budget and payment details with the official organisers before contributing.</p>
-      <div class="feature-grid">
-        <article class="feature"><span>01</span><h3>Community</h3><p>Help create a warm welcome for new members.</p></article>
-        <article class="feature"><span>02</span><h3>Participation</h3><p>Support activities that bring attendees together.</p></article>
-        <article class="feature"><span>03</span><h3>Transparency</h3><p>Organisers should record contributions and share a clear account of spending.</p></article>
-      </div>
-    </section>
-
-    <section class="donate-section" id="donate">
-      <div>
-        <p class="eyebrow">Donation pledge</p>
-        <h2>How would you like to help?</h2>
-        <p>This demo records a pledge in your browser session only. It does not collect payments or send information to a server.</p>
-        <div class="notice"><strong>Important:</strong> Do not enter bank details, UPI PINs, passwords, or other sensitive financial information here.</div>
-      </div>
-      <form id="pledge-form" class="pledge-form">
-        <label for="fullName">Your name</label>
-        <input id="fullName" name="fullName" type="text" maxlength="80" autocomplete="name" placeholder="Enter your name" required />
-
-        <label for="amount">Pledge amount (₹)</label>
-        <select id="amount" name="amount" required>
-          <option value="">Choose an amount</option>
-          <option value="100">₹100</option>
-          <option value="250">₹250</option>
-          <option value="500">₹500</option>
-          <option value="1000">₹1,000</option>
-          <option value="custom">Other amount</option>
-        </select>
-
-        <div id="custom-amount-wrap" hidden>
-          <label for="customAmount">Other amount (₹)</label>
-          <input id="customAmount" name="customAmount" type="number" min="1" max="1000000" step="1" placeholder="Enter amount" />
-        </div>
-
-        <label for="message">Message (optional)</label>
-        <textarea id="message" name="message" maxlength="300" rows="3" placeholder="Add a short message"></textarea>
-        <button class="button" type="submit">Save pledge locally</button>
-        <p class="form-footnote">A pledge is not a payment. Contact the authorised campaign organisers for verified donation instructions.</p>
-        <p id="form-status" class="status" role="status" aria-live="polite"></p>
-      </form>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow">Campaign principles</p>
-      <h2>Trust matters.</h2>
-      <ul class="principles">
-        <li>Share the campaign's purpose and approved budget clearly.</li>
-        <li>Use only verified payment details issued by the organisers.</li>
-        <li>Keep a record of donations and provide receipts where applicable.</li>
-        <li>Never pressure anyone to contribute; participation is voluntary.</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Molsom Freshers' Meet Donation Campaign</p>
-    <p>Demo template — replace this text with verified organiser and contact information before publishing.</p>
-  </footer>
-  <script src="script.js"></script>
+<header>
+<h1>Molsom Language Learning</h1>
+<p>Learn vocabulary, phrases and basic grammar.</p>
+</header>
+<section class="card">
+<h2>Word of the Day</h2>
+<p id="word">Hello</p>
+<button onclick="nextWord()">Next Word</button>
+</section>
+<section class="card">
+<h2>Quick Quiz</h2>
+<p>What is the translation of 'Hello'?</p>
+<input id="answer" placeholder="Type answer">
+<button onclick="checkAnswer()">Submit</button>
+<p id="result"></p>
+</section>
+<script src="script.js"></script>
 </body>
 </html>
